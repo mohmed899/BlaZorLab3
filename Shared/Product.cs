@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Shared
 {
@@ -11,7 +12,8 @@ namespace Shared
         public string Img { get; set; }
         [ForeignKey("category")]
         public int CatId { get; set; }
-      
+        [JsonIgnore]
+
         virtual public Category category { get; set; }
     }
 }

@@ -21,6 +21,7 @@ namespace BlazorApp1.Pages
 
         public void Save()
         {
+            Console.WriteLine("update");
             proRepo.Update(product.Id, product);
         }
     }
