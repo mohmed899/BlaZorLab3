@@ -1,0 +1,25 @@
+﻿@page "/p/{id:int}"
+@using global::Shared
+@inject BaseServices<Product> proRepo 
+<h3>ProductDetails</h3>
+
+@if (pro!=null)
+{
+<div class="card" style="width:400px">
+        <img class="card-img-top" src="@pro.Img" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">@pro.Name</h4>
+          <p class="card-text">@pro.price</p>
+          <a href="/p-Edite/@pro.Id" class="btn btn-primary">Edit</a>
+        </div>
+    </div>
+
+}
+else
+{
+    <h1>Lodading </h1>
+}
+
+@code {
+
+}

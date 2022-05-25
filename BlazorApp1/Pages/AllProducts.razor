@@ -1,0 +1,28 @@
+﻿
+@page "/p"
+@using global::Shared
+
+@inject BaseServices<Product> ProductRepo
+<h3>AllProducts</h3>
+
+<div class="d-flex flex-wrap">
+
+@foreach (var product in products)
+{
+    
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="http://localhost:5246/imgg/p1.jpg"  alt="Card image cap" style="  height:200px">
+  <div class="card-body">
+    <h5 class="card-title">@product.Name</h5>
+    <h4 class="card-title">@product.price</h4>
+    <p class="card-text">@product.Description</p>
+    <a href="/p/@product.Id" class="btn btn-primary">Details</a>
+    
+  </div>
+</div>
+}
+</div>
+
+@code {
+
+}
